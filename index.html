@@ -276,6 +276,51 @@
     letter-spacing: 0.01em;
   }
 
+  /* ---------- SOURCES ---------- */
+  .src-list{
+    list-style: none;
+    counter-reset: src;
+    margin: 30px 0 0;
+    padding: 0;
+  }
+  .src-list li{
+    counter-increment: src;
+    position: relative;
+    padding: 16px 0 16px 44px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .src-list li:last-child{ border-bottom: 1px solid var(--rule); }
+  .src-list li::before{
+    content: counter(src);
+    position: absolute;
+    left: 0;
+    top: 16px;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    width: 28px;
+    text-align: right;
+  }
+  .src-text{
+    color: var(--ink-dim);
+    font-size: 0.95rem;
+  }
+  .src-list a{
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    color: var(--steel-light);
+    text-decoration: none;
+    word-break: break-all;
+    width: fit-content;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+  .src-list a:hover{ color: var(--gold-light); border-color: var(--gold); }
+
   /* ---------- FOOTER ---------- */
   footer{
     padding: 56px 0 calc(56px + env(safe-area-inset-bottom, 0px));
@@ -501,6 +546,22 @@
       <div class="measure">
         <p>Буква «Т» в топонимике Запорожской области — это не просто перечень названий, а многослойный исторический текст. От античных тавров и казацких сечей до советских строек и легендарного автомобиля — каждое имя хранит память о людях и событиях, сформировавших этот край.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <div class="wrap">
+      <div class="kicker">Источники</div>
+      <h2>Материалы, использованные при подготовке</h2>
+      <ol class="src-list">
+        <li><span class="src-text">Таврия (Токмакский район) — Википедия — общие сведения о селе, административная принадлежность.</span><a href="https://ru.wikipedia.org/wiki/Таврия_(Токмакский_район)" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">Токмак (Украина) — Википедия — история города, основание, статус уездного центра Таврической области.</span><a href="https://ru.wikipedia.org/wiki/Токмак_(Украина)" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">Таврийск — Википедия — история города, образование в 1983 году, население.</span><a href="https://ru.wikipedia.org/wiki/Таврийск" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">Таврийское (Приазовский район) — Википедия — сведения о селе, население, административная принадлежность.</span><a href="https://ru.wikipedia.org/wiki/Таврийское_(Приазовский_район)" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">Таврийское (Акимовский район) — Википедия — история села, прежние названия, население.</span><a href="https://ru.wikipedia.org/wiki/Таврийское_(Акимовский_район)" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">Томаковка — Википедия — история посёлка, Томаковская Сечь, первое упоминание.</span><a href="https://ru.wikipedia.org/wiki/Томаковка" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+        <li><span class="src-text">ЗАЗ-1102 «Таврия» — Википедия — история создания автомобиля, конкурс на название, серийное производство.</span><a href="https://ru.wikipedia.org/wiki/ЗАЗ-1102" target="_blank" rel="noopener">ru.wikipedia.org</a></li>
+      </ol>
     </div>
   </section>
 
